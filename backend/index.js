@@ -1,12 +1,11 @@
 import { ApolloServer } from "@apollo/server";
-import { startStandaloneServer } from "@apollo/server/standalone";
 import { expressMiddleware } from "@apollo/server/express4";
 import { ApolloServerPluginDrainHttpServer } from "@apollo/server/plugin/drainHttpServer";
 import { buildContext } from "graphql-passport";
 
 import passport from "passport";
 import session from "express-session";
-import ConnectMongoDBSession from "connect-mongodb-session";
+import connectMongo from "connect-mongodb-session";
 import { configurePassport } from "./passport/passport.config.js";
 
 import express from "express";
